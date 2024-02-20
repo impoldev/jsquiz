@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "question": "What is the output of this code?",
+        "code": "console.log(typeof null)",
+        "answers": [
+            "undefined",
+            "NaN",
+            "string",
+            "object"
+        ],
+        "correctAnswer": 3
+    },
+    {
+        "id": 2,
+        "question": "What is the output of this code?",
+        "code": "console.log(2 + 3)",
+        "answers": [
+            "5",
+            "6",
+            "23",
+            "32"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "id": 3,
+        "question": "What value is assigned to x in this code?",
+        "code": "var x = 5;\nx += 3",
+        "answers": [
+            "53",
+            "15",
+            "8",
+            "Error"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 4,
+        "question": "What is the output of this code?",
+        "code": "console.log('10' - '3')",
+        "answers": [
+            "7",
+            "10",
+            "3",
+            "Error"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "id": 5,
+        "question": "What is the output of the following code?",
+        "code": "console.log('hello'.toUpperCase())",
+        "answers": [
+            "hello",
+            "HELLO",
+            "undefined",
+            "Error"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 6,
+        "question": "What is the value of the variable 'result'?",
+        "code": "var result = typeof [1, 2, 3]",
+        "answers": [
+            "array",
+            "object",
+            "undefined",
+            "string"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 7,
+        "question": "What is the output of the following code?",
+        "code": "console.log(4 * '4')",
+        "answers": [
+            "16",
+            "'16'",
+            "Error",
+            "4"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "id": 8,
+        "question": "What is the output of this code?",
+        "code": "console.log(1 + '1' + 1)",
+        "answers": [
+            "'111'",
+            "3",
+            "Error",
+            "'12'"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "id": 9,
+        "question": "What is the result?",
+        "code": "console.log('5' === 5)",
+        "answers": [
+            "true",
+            "false",
+            "Error",
+            "NaN"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 10,
+        "question": "What is the result of this code?",
+        "code": "console.log([...[...'123']][1])",
+        "answers": [
+            "1",
+            "'1'",
+            "'2'",
+            "2"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 11,
+        "question": "What is the result?",
+        "code": "console.log(3 + 2 + \"7\")",
+        "answers": [
+            "\"327\"",
+            "12",
+            "\"57\"",
+            "Error"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 12,
+        "question": "What is the output of this code?",
+        "code": "console.log(2 + \"2\" - 2)",
+        "answers": [
+            "22",
+            "NaN",
+            "Error",
+            "20"
+        ],
+        "correctAnswer": 3
+    },
+    {
+        "id": 13,
+        "question": "What is printed to the console?",
+        "code": "var a = 1;\nfunction b() {\n    a = 10;\n    return;\n    function a() { }\n}\nb();\nconsole.log(a);",
+        "answers": [
+            "1",
+            "10",
+            "Error",
+            "undefined"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "id": 14,
+        "question": "What is the result of this code?",
+        "code": "console.log(typeof typeof null)",
+        "answers": [
+            "object",
+            "null",
+            "string",
+            "undefined"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 15,
+        "question": "What is displayed in the console?",
+        "code": "function example() {\n    return {\n        foo: \"Hello\"\n    };\n}\nconsole.log(example().foo);",
+        "answers": [
+            "\"Hello\"",
+            "Error",
+            "undefined",
+            "ReferenceError"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "id": 16,
+        "question": "What is the result of this operation?",
+        "code": "console.log(5 || 1)",
+        "answers": [
+            "5",
+            "undefined",
+            "true",
+            "1"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "id": 17,
+        "question": "What is displayed in the console?",
+        "code": "console.log(typeof [])",
+        "answers": [
+            "null",
+            "array",
+            "object",
+            "undefined"
+        ],
+        "correctAnswer": 2
+    },
+    {
+        "id": 18,
+        "question": "What is the result of this code?",
+        "code": "console.log(+'Infinity')",
+        "answers": [
+            "Infinity",
+            "TypeError",
+            "NaN",
+            "Error"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "id": 19,
+        "question": "What is printed to the console?",
+        "code": "console.log(3 === 3 === 3)",
+        "answers": [
+            "true",
+            "false",
+            "TypeError",
+            "undefined"
+        ],
+        "correctAnswer": 1
+    },
+    {
+        "id": 20,
+        "question": "What value is displayed in the console?",
+        "code": "function example() {\n    let result = 0;\n    for (let i = 0; i < 5; i++) {\n        setTimeout(() => {\n            result += i;\n        }, 1000);\n    }\n    setTimeout(() => {\n        console.log(result);\n    }, 2000);\n}\nexample();",
+        "answers": [
+            "10",
+            "NaN",
+            "Error",
+            "0"
+        ],
+        "correctAnswer": 0
+    }
+]
