@@ -6,11 +6,15 @@ import { agate } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 export function Question () {
   const isDesktop = useMediaQuery('(min-width:500px)')
+  const touch = useStore(state => state.touch)
   const questions = useStore(state => state.questions)
   const initialQuestion = useStore(state => state.initialQuestion)
   const currentQuestion = questions[initialQuestion]
 
   const evaluateAnswer = useStore(state => state.evaluateAnswer)
+  const handleTouchStart = useStore(state => state.handleTouchStart)
+  const handleTouchMove = useStore(state => state.handleTouchMove)
+  const handleTouchEnd = useStore(state => state.handleTouchEnd)
 
   function getBackgroundColor (index: number) {
     const { correctAnswer, selectedAnswer } = currentQuestion
@@ -20,7 +24,8 @@ export function Question () {
     if (index !== correctAnswer && index === selectedAnswer) return 'red'
     if (index !== correctAnswer && index !== selectedAnswer) return 'transparent'
   }
-  console.log(isDesktop)
+
+  console.log(touch)
   return (
           <Card sx={{ padding: 2, maxWidth: '100%' }}>
           <Typography variant="h6" component="h3" sx={{ userSelect: 'none' }}>
@@ -35,7 +40,9 @@ export function Question () {
                       <ListItemButton
                       disabled={currentQuestion.selectedAnswer != null}
                       onClick={() => { evaluateAnswer(currentQuestion.id, index) }}
-                      onTouchStart={() => { evaluateAnswer(currentQuestion.id, index) }}
+                      onTouchStart={() => { handleTouchStart() }}
+                      onTouchMove={() => { handleTouchMove() }}
+                      onTouchEnd={() => { handleTouchEnd(currentQuestion.id, index) }}
                       sx={{ backgroundColor: getBackgroundColor(index) }}>
                           <ListItemText sx={{ textAlign: 'center' }}>{ans}</ListItemText>
                       </ListItemButton>

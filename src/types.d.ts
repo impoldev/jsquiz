@@ -7,4 +7,5 @@ export interface Question {
   answerIsCorrect?: boolean
   selectedAnswer?: number
   resultsVisible?: boolean
+  touch?: boolean
 }
