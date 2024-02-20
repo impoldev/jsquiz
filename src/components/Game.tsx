@@ -51,7 +51,7 @@ export function Game () {
                 <Typography variant='h5' component='h4' sx={{ marginBottom: '20px' }}>
                     Congratulations! You have achieved <strong style={{ color: '#0fd50f' }}>{correct / (correct + incorrect) * 100}%</strong> correct answers.
                 </Typography>
-                <Stack direction='row' sx= {{ justifyContent: 'center', gap: '2' }}>
+                <Stack direction='row' sx= {{ justifyContent: 'center', gap: 2 }}>
                     <Button variant='outlined' color='ochre' size='large' onClick={() => { reset() }}>Restart</Button>
                     <Button variant='outlined' color='ochre' size='large' onClick={() => { showResults() }}>See results</Button>
                 </Stack>
