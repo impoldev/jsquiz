@@ -6,7 +6,6 @@ import { agate } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 export function Question () {
   const isDesktop = useMediaQuery('(min-width:500px)')
-  const touch = useStore(state => state.touch)
   const questions = useStore(state => state.questions)
   const initialQuestion = useStore(state => state.initialQuestion)
   const currentQuestion = questions[initialQuestion]
@@ -25,7 +24,6 @@ export function Question () {
     if (index !== correctAnswer && index !== selectedAnswer) return 'transparent'
   }
 
-  console.log(touch)
   return (
           <Card sx={{ padding: 2, maxWidth: '100%' }}>
           <Typography variant="h6" component="h3" sx={{ userSelect: 'none' }}>
