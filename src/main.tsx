@@ -10,6 +10,8 @@ import '@fontsource/roboto/700.css'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 
+import { Analytics } from '@vercel/analytics/react'
+
 declare module '@mui/material/styles' {
   interface Palette {
     ochre: Palette['primary']
@@ -49,5 +51,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <ThemeProvider theme={darkTheme}>
     <CssBaseline />
     <App />
+    <Analytics />
   </ThemeProvider>
 )
