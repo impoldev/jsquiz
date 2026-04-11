@@ -11,10 +11,10 @@ function App () {
   return (
     <>
     <Container maxWidth="sm">
-        <Typography variant="h2" component="h1" alignItems="center" gap='10px' justifyContent='center' marginBottom={2.5} sx={{ userSelect: 'none' }}><JavascriptLogo /> Quiz</Typography>
+        <Typography variant="h2" component="h1" sx={{ userSelect: 'none', mb: 2.5, alignItems: 'center', gap: '10px', justifyContent: 'center' }}><JavascriptLogo /> Quiz</Typography>
         {questions.length === 0 && <Start />}
         {questions.length > 0 && <Game />}
-        <Typography marginTop={5}>Developed with ❤️ by <Link color='#f7df1e' href="https://github.com/impoldev">Pablo Ollé</Link> in 2024</Typography>
+        <Typography sx={{ mt: 5 }}>Developed with ❤️ by <Link color='#f7df1e' href="https://github.com/impoldev">Pablo Ollé</Link> in 2024</Typography>
     </Container>
     </>
   )
